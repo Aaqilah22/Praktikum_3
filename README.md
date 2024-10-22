@@ -1,108 +1,36 @@
 # Praktikum3
 ## 1. Membuat Class Pegawai
-  // Kelas Pegawai
-  public class Pegawai {
-      private String nama;
-      private double gajiPokok;
+![Kelas Pegawai](https://github.com/user-attachments/assets/9dfbcdc1-db53-45bc-a949-1f78c5bcadd4)
 
-      // Setter dan Getter untuk nama
-      public void setNama(String nama) {
-          this.nama = nama;
-      }
-
-      public String getNama() {
-          return nama;
-      }
-
-      // Setter dan Getter untuk gajiPokok
-      public void setGajiPokok(double gajiPokok) {
-          this.gajiPokok = gajiPokok;
-      }
-
-      public double getGajiPokok() {
-          return gajiPokok;
-      }
-
-      // Method untuk mencetak informasi pegawai
-      public void cetakInfo() {
-          System.out.println("Nama: " + nama);
-          System.out.println("Gaji Pokok: Rp" + gajiPokok);
-      }
-    }  
 Penjelasan:
-*Atribut :*
+a. Atribut :
 - nama (tipe String): Untuk menyimpan nama pegawai.
 - gajiPokok (tipe double): Untuk menyimpan gaji pokok pegawai
-*Setter dan Getter :*
+b. Setter dan Getter :
 - setNama(String nama): Method ini digunakan untuk memberikan nilai pada atribut nama.
 - getNama(): Method ini mengembalikan nilai dari atribut nama.
 - setGajiPokok(double gajiPokok): Method ini digunakan untuk memberikan nilai pada atribut gajiPokok.
 - getGajiPokok(): Method ini mengembalikan nilai dari atribut gajiPokok.
-*Method cetakInfo() :*
+c. Method cetakInfo() :
 Adalah method untuk mencetak informasi pegawai, seperti nama dan gaji pokok. Method ini tidak menerima parameter dan tidak mengembalikan nilai (void).
 
 ## 2. Membuat Kelas Manager
-  // Kelas Manager (turunan dari Pegawai)
-  public class Manager extends Pegawai {
-    private double tunjangan;
+![Kelas Manager](https://github.com/user-attachments/assets/363af9ac-c3aa-4d8e-ad10-354db43e3965)
 
-    // Setter dan Getter untuk tunjangan
-    public void setTunjangan(double tunjangan) {
-        this.tunjangan = tunjangan;
-    }
-
-    public double getTunjangan() {
-        return tunjangan;
-    }
-
-    @Override
-    public void cetakInfo() {
-        super.cetakInfo(); // Memanggil cetakInfo() dari superclass (Pegawai)
-        System.out.println("Tunjangan: Rp" + tunjangan);
-    }
-
-    // Method untuk mencetak tunjangan saja
-    public void cetakTunjangan() {
-        System.out.println("Tunjangan: Rp" + tunjangan);
-    }
-  }
 Penjelasan :
-*Atribut :*
+a. Atribut :
 tunjangan (tipe double): Atribut tambahan untuk menyimpan tunjangan yang diterima oleh seorang manager.
-*Setter dan Getter :*
+b. Setter dan Getter :
 - setTunjangan(double tunjangan): Method ini digunakan untuk memberikan nilai pada atribut tunjangan.
 - getTunjangan(): Method ini mengembalikan nilai dari atribut tunjangan.
-*Method cetakTunjangan() :*
+c. Method cetakTunjangan() :
 Method ini khusus untuk mencetak nilai tunjangan seorang manager. Berbeda dengan cetakInfo(), method ini hanya fokus pada tunjangan saja.
-*Override Method cetakInfo() :*
+d. Override Method cetakInfo() :
 Di kelas Manager, method cetakInfo() di-override (diganti) untuk menampilkan informasi tambahan, yaitu tunjangan. Method super.cetakInfo() digunakan untuk memanggil cetakInfo() dari kelas Pegawai dan kemudian ditambah dengan informasi tunjangan.
 
 ## 3. Membuat Kelas Programmer
-  // Kelas Programmer (turunan dari Pegawai)
-public class Programmer extends Pegawai {
-    private double bonus;
+![Kelas Programmer](https://github.com/user-attachments/assets/2f1a4728-0897-4e3a-a325-f5d733fbf429)
 
-    // Setter dan Getter untuk bonus
-    public void setBonus(double bonus) {
-        this.bonus = bonus;
-    }
-
-    public double getBonus() {
-        return bonus;
-    }
-
-    // Override method cetakInfo
-    @Override
-    public void cetakInfo() {
-        super.cetakInfo(); // Memanggil cetakInfo() dari superclass (Pegawai)
-        System.out.println("Bonus: Rp" + bonus);
-    }
-
-    // Method untuk mencetak bonus saja
-    public void cetakBonus() {
-        System.out.println("Bonus: Rp" + bonus);
-    }
-  }
 Penjelasan :
 *Atribut :*
 bonus (tipe double): Atribut tambahan yang digunakan untuk menyimpan bonus yang diterima oleh programmer.
@@ -115,25 +43,8 @@ Method ini khusus digunakan untuk mencetak nilai bonus seorang programmer.
 Sama seperti pada kelas Manager, method cetakInfo() di-override untuk menambahkan informasi tentang bonus di samping informasi pegawai standar. Method super.cetakInfo() digunakan untuk memanggil method dari kelas induk.
 
 ## 4. Membuat Kelas Main
-  public class Main {
-    public static void main(String[] args) {
-        // Membuat objek Manager
-        Manager manager = new Manager();
-        manager.setNama("Budi");
-        manager.setGajiPokok(5000000);
-        manager.setTunjangan(2000000);
-        manager.cetakInfo();
+![Kelas Main](https://github.com/user-attachments/assets/47ea8a38-6587-42f9-875a-51e915fba967)
 
-        System.out.println();
-
-        // Membuat objek Programmer
-        Programmer programmer = new Programmer();
-        programmer.setNama("Andi");
-        programmer.setGajiPokok(4000000);
-        programmer.setBonus(1500000);
-        programmer.cetakInfo();
-    }
-  }
 Penjelasan :
 - Pertama, kita membuat objek Manager bernama Budi dan mengatur gajiPokok serta tunjangan. Kemudian, method cetakInfo() akan mencetak semua informasi yang dimiliki oleh objek tersebut.
 - Selanjutnya, kita membuat objek Programmer bernama Andi dan mengatur gajiPokok serta bonus. Sama seperti sebelumnya, method cetakInfo() akan mencetak informasi lengkap programmer.
