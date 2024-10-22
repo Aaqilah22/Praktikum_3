@@ -3,6 +3,7 @@
 ![Kelas Pegawai](https://github.com/user-attachments/assets/9dfbcdc1-db53-45bc-a949-1f78c5bcadd4)
 
 Penjelasan:
+
 a. Atribut :
 - nama (tipe String): Untuk menyimpan nama pegawai.
 - gajiPokok (tipe double): Untuk menyimpan gaji pokok pegawai
@@ -18,6 +19,7 @@ Adalah method untuk mencetak informasi pegawai, seperti nama dan gaji pokok. Met
 ![Kelas Manager](https://github.com/user-attachments/assets/363af9ac-c3aa-4d8e-ad10-354db43e3965)
 
 Penjelasan :
+
 a. Atribut :
 tunjangan (tipe double): Atribut tambahan untuk menyimpan tunjangan yang diterima oleh seorang manager.
 b. Setter dan Getter :
@@ -32,14 +34,15 @@ Di kelas Manager, method cetakInfo() di-override (diganti) untuk menampilkan inf
 ![Kelas Programmer](https://github.com/user-attachments/assets/2f1a4728-0897-4e3a-a325-f5d733fbf429)
 
 Penjelasan :
-*Atribut :*
+
+a. Atribut :
 bonus (tipe double): Atribut tambahan yang digunakan untuk menyimpan bonus yang diterima oleh programmer.
-*Setter dan Getter :*
+b. Setter dan Getter :
 - setBonus(double bonus): Method ini digunakan untuk memberikan nilai pada atribut bonus.
 - getBonus(): Method ini mengembalikan nilai dari atribut bonus.
-*Method cetakBonus() :*
+c. Method cetakBonus() :
 Method ini khusus digunakan untuk mencetak nilai bonus seorang programmer.
-*Override Method cetakInfo() :*
+d. Override Method cetakInfo() :
 Sama seperti pada kelas Manager, method cetakInfo() di-override untuk menambahkan informasi tentang bonus di samping informasi pegawai standar. Method super.cetakInfo() digunakan untuk memanggil method dari kelas induk.
 
 ## 4. Membuat Kelas Main
